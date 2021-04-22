@@ -117,7 +117,7 @@ def readData(filename):
 	for i in attributes:
 		data = []
 		for j in i:
-			data.append('%0.4f' % j)
+			data.append(j)
 		attribute_list.append(data)
 
     # Get class list
@@ -133,6 +133,8 @@ def readData(filename):
 
 	# numClass = len(classes)
 	class_encoder=class_encoder.astype(np.float64)
+
+	print(attribute_list)
 
 	return attribute_list, class_list
 
